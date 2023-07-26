@@ -123,12 +123,107 @@ section h1 {
             gap: 0;
             align-items: flex-start;
             display: none;
+            perspective: 1000px;
         }
 
     .nav__links li {
         width: 100%;
         box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.2);
     }
+
+    /* ANIMATION 1 */
+
+    .nav__links li {
+        transform: rotateZ(-90deg) rotateY(90deg);
+        transform-origin: top right;
+        animation: animation1 1s ease forwards;
+        opacity: 0;
+    }
+
+    .nav__links li:nth-child(2) {
+        animation-delay: 300ms;
+        transform-origin: top left;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+
+    .nav__links li:nth-child(3) {
+        animation-delay: 600ms;
+    }
+
+    .nav__links li:nth-child(4) {
+        animation-delay: 900ms;
+        transform-origin: top left;
+        transform: rotateZ(90deg) rotateY(-90deg);
+    }
+
+
+    .nav__links li:nth-child(5) {
+        animation-delay: 1.2s;
+    }
+
+    @keyframes animation1 {
+        to {
+            transform: rotate(0);
+            opacity: 1;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .nav__links li a {
         background: var(--color-white);
